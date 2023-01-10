@@ -14,10 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          cache: 'npm'
-          cache-dependency-path: hangman-api/package-lock.json
       - name: Build Docker Image
         env:
           TOKEN_PASSWORD: ${{ secrets.TOKEN_PASSWORD }}
