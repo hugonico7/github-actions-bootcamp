@@ -2,10 +2,6 @@ name: Ejercicio2
 
 on:
   workflow_dispatch:
-    inputs:
-      image_name:
-        description: 'hagman-front'
-        required: true
 
 jobs:
   build-and-push:
@@ -23,4 +19,5 @@ jobs:
         run: |
           npm ci 
           npm run build --if-present
+          docker build -t hangman-front .
           
