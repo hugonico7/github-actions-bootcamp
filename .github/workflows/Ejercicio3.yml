@@ -1,0 +1,17 @@
+name: Ejercicio3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Codigo
+      uses: actions/checkout@v2
+
+    - name: Docker Compose
+      run: |
+        docker-compose build
+        docker-compose run --rm app npm test 
