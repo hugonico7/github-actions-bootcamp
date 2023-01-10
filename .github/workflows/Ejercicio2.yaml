@@ -19,6 +19,6 @@ jobs:
         run: |
           npm ci 
           npm run build --if-present
-          docker build -t hangman-front .
-          docker push hugonico7/hangman-front:latest
+          docker build -t ghcr.io/hugonico7/hangman-front:latest .
+          docker push ghcr.io/hugonico7/hangman-front:latest
           
