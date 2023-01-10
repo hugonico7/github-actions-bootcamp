@@ -2,5 +2,5 @@ version: '3'
 services:
   app:
     build: .
-    command: sh
+    command: npm test
     working_dir: /opt/build
