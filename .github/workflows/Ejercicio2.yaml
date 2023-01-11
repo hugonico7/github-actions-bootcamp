@@ -22,5 +22,5 @@ jobs:
       - uses: docker/build-push-action@v3
         with:
           push: true
-          tags: hugonico7/"${{ inputs.image_name }}"
+          tags: hugonico7/${{ inputs.image_name }}
       
