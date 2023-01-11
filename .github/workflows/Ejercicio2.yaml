@@ -21,6 +21,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v3
         with:
+          context: .
+          file: Dockerfile
           push: true
-          tags: hugonico7/${{ inputs.image_name }}
+          tags: ${{ github.actor }}/${{ inputs.image_name }}
       
