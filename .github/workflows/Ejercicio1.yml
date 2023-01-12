@@ -13,8 +13,6 @@ jobs:
       - uses: actions/setup-node@v3 
         with:
           node-version: 16
-          cache: 'npm'
-          cache-dependency-path: hangman-api/package-lock.json
       - name: build
         run: |
           npm ci 
@@ -28,8 +26,6 @@ jobs:
       - uses: actions/setup-node@v3 
         with:
           node-version: 16
-          cache: 'npm'
-          cache-dependency-path: hangman-api/package-lock.json
       - name: test
         run: |
           npm ci
